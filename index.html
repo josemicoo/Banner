@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    #contenedor {
+        width: 300px;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    #fondo {
+        position: relative
+    }
+
+    #ahoraShopping, #ahora12, #cuotasTransparente, #pagaEnCuotas, .numero3, .numero6, .numero12, .numero18,  #disfrutasHoy, #rectBlanco, #logoPatio, #alcorta, #dot, #altoPalermo, #abasto, #altoAvellaneda, #solei, #arcos {
+        position: absolute;
+        top: 0;
+        left: 0%;
+    }
+
+
+    /******************************************************
+    *******************************************************
+    ********************ANIMACIONES************************
+    *******************************************************
+    ******************************************************/
+
+    /************************************
+    ****ENTRADA CARTEL AHORA SHOPPING****
+    ************************************/
+
+    @keyframes entradaAhoraShopping {
+        0% {top: -300px;}
+        100% {top: 0;}
+    }
+
+    @keyframes cuotasTransparenteAnimacion {
+        0% {
+            bottom: -600px;
+            opacity: 0%;
+        }
+
+        100% {
+            bottom: 0px;
+            opacity: 100%;
+        }
+    }
+
+    @keyframes pagaEnCuotasPos {
+        0%{left: -300px;}
+        100%{left: 0px;}
+        
+    }
+
+    @keyframes escalaNumeros {
+            0%{transform: scale(0);}
+            50%{transform: scale(1.2);}
+            100%{transform: scale(1);}         
+    }
+
+    @keyframes disfrutasHoyA {
+        0%{transform:translateY(300px);}
+        100%{transform: translateY(0px);}
+    }
+
+    /************************************
+    ****SALIDA CARTELES AHORA SHOPPING****
+    ************************************/
+
+    @keyframes bajadaOpacidad {
+        0%{opacity: 100%;}
+        100%{opacity: 0%;}
+    }
+
+    /************************************
+    ************ENTRADAS PLACA 2**********
+    ************************************/
+
+    @keyframes entradaRectBlanco {
+        0%{transform:translateY(600px);}
+        100%{transform: translateY(0px);}
+    }
+
+    @keyframes logosEntrada {
+        0%{transform: scale(0);}
+        50%{transform: scale(1.2);}
+        100%{transform: scale(1);}      
+    }
+
+
+
+
+    /******************************************************
+    *******************************************************
+    *****************ELEMENTOS ANIMADO*********************
+    *******************************************************
+    ******************************************************/
+
+    #ahoraShopping {
+        animation-name: entradaAhoraShopping;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+
+       -webkit-animation-name: entradaAhoraShopping;
+       -webkit-animation-duration: 1s;
+       -webkit-animation-fill-mode: forwards;
+    }
+
+    #ahora12 {
+        top: -300px;
+        animation-name: entradaAhoraShopping;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.5s;
+
+       -webkit-animation-name: entradaAhoraShopping;
+       -webkit-animation-duration: 1s;
+       -webkit-animation-fill-mode: forwards;
+       -webkit-animation-delay: 0.5s;
+    }
+
+    #cuotasTransparente {
+        animation-name: cuotasTransparenteAnimacion, bajadaOpacidad;
+        animation-duration: 1s, 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1.5s, 5s;
+        opacity: 0;
+
+        -webkit-animation-name: cuotasTransparenteAnimacion, bajadaOpacidad;
+        -webkit-animation-duration: 1s, 1s;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-delay: 1.5s, 5s;
+        -webkit-opacity: 0;
+    }
+
+    #pagaEnCuotas {
+        animation-name:pagaEnCuotasPos, bajadaOpacidad;
+        animation-duration: 1.2s, 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s, 5s;
+        left: -300px;
+
+        -webkit-animation-name:pagaEnCuotasPos, bajadaOpacidad;
+        -webkit-animation-duration: 1.2s, 1s;
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-delay: 1s, 5s;
+        -webkit-left: -300px;
+    }
+
+    .numero3 {
+        animation-name: escalaNumeros, bajadaOpacidad;
+        animation-duration: 1s, 1s;
+        transform-origin:center;
+        animation-delay: 2s, 5s;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+        
+        -webkit-animation-name: escalaNumeros, bajadaOpacidad;
+        -webkit-animation-duration: 1s, 1s;
+        -webkit-transform-origin:center;
+        -webkit-animation-delay: 2s, 5s;
+        -webkit-transform: scale(0);
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    .numero6 {
+        animation-name: escalaNumeros, bajadaOpacidad;
+        animation-duration: 1s, 1s;
+        transform-origin:center;
+        animation-delay: 2.3s, 5s;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+
+        -webkit-animation-name: escalaNumeros, bajadaOpacidad;
+        -webkit-animation-duration: 1s, 1s;
+        -webkit-transform-origin:center;
+        -webkit-animation-delay: 2.3s, 5s;
+        -webkit-transform: scale(0);
+        -webkit-animation-fill-mode: forwards;
+
+    }
+
+    .numero12 {
+        animation-name: escalaNumeros, bajadaOpacidad;
+        animation-duration: 1s, 1s;
+        transform-origin:center;
+        animation-delay: 2.5s, 5s;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+
+        -webkit-animation-name: escalaNumeros, bajadaOpacidad;
+        -webkit-animation-duration: 1s, 1s;
+        -webkit-transform-origin:center;
+        -webkit-animation-delay: 2.5s, 5s;
+        -webkit-transform: scale(0);
+        -webkit-animation-fill-mode: forwards;
+
+    }
+
+    .numero18 {
+        animation-name: escalaNumeros, bajadaOpacidad;
+        animation-duration: 1s, 1s;
+        transform-origin:center;
+        animation-delay: 2.8s, 5s;
+        transform: scale(0);
+        animation-fill-mode: forwards;
+
+        -webkit-animation-name: escalaNumeros, bajadaOpacidad;
+        -webkit-animation-duration: 1s, 1s;
+        -webkit-transform-origin:center;
+        -webkit-animation-delay: 2.8s, 5s;
+        -webkit-transform: scale(0);
+        -webkit-animation-fill-mode: forwards;
+
+    }
+
+    #disfrutasHoy {
+        animation-name: disfrutasHoyA, bajadaOpacidad;
+        animation-duration: 1s, 1s;
+        animation-delay: 3s, 5s;
+        animation-fill-mode: forwards;
+        transform: translateY(300px);
+        
+
+        -webkit-animation-name: disfrutasHoyA, bajadaOpacidad;
+        -webkit-animation-duration: 1s, 1s;
+        -webkit-animation-delay: 3s, 5s;
+        -webkit-transform: translateY(300px);
+    }
+
+    #rectBlanco {
+        position: absolute;
+        transform: translateY(600px);
+        left: 0px;
+        animation-name: entradaRectBlanco;
+        animation-duration: 1s;
+        animation-delay: 6s;
+        animation-fill-mode: forwards;
+
+        -webkit-position: absolute;
+        -webkit-transform: translateY(600px); 
+        -webkit-left: 0px;
+        -webkit-animation-name: entradaRectBlanco;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 6s;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #logoPatio {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:7s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animation-delay:7s ;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #alcorta {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:7.2s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animationdelay:7.2s ;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #dot {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:7.4s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animationdelay:7.4s ;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #altoPalermo {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:7.6s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animationdelay:7.6s ;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #abasto {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:7.8s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animationdelay:7.8s ;
+        -webkit-animation-fill-mode: forwards;    
+    }
+
+    #altoAvellaneda {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:8s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animationdelay:8s ;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #solei {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:8.2s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animationdelay:8.2s ;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+    #arcos {
+        transform: scale(0);
+        animation-name: logosEntrada;
+        animation-duration: 0.7s;
+        animation-delay:8.4s ;
+        animation-fill-mode: forwards;
+
+        -webkit-transform: scale(0);
+        -webkit-animation-name: logosEntrada;
+        -webkit-animation-duration: 0.7s;
+        -webkit-animationdelay:8.4s ;
+        -webkit-animation-fill-mode: forwards;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+
+        <div id="fondo">
+            <img src="/Images/fondo.jpg" alt="">
+        </div>        
+
+        <div id="ahoraShopping">
+            <img src="/Images/ahoraShopping.png" alt=""/>
+        </div>
+
+        <div id="ahora12">
+            <img src="/Images/ahora12.png" alt=""/>
+        </div>
+
+        <div id="cuotasTransparente">
+            <img src="/Images/cuotas.png" alt=""/>
+        </div>
+
+        <div id="pagaEnCuotas">
+            <img src="/Images/pagaEnCuotas.png" alt=""/>
+        </div>
+
+        <div class="numero3">
+            <img src="/Images/numero_3.png" alt=""/>
+        </div>
+
+        <div class="numero6">
+            <img src="/Images/numero_6.png" alt=""/>
+        </div>
+
+        <div class="numero12">
+            <img src="/Images/numero_12.png" alt=""/>
+        </div>
+
+        <div class="numero18">
+            <img src="/Images/numero_18.png" alt=""/>
+        </div>
+
+        <div id="disfrutasHoy">
+            <img src="/Images/disfrutaHoy.png" alt=""/>
+        </div>
+
+        
+
+        <div id="rectBlanco">
+            <img src="/Images/rectBlanco.png" alt=""/>
+        </div>
+
+        <div id="logoPatio">
+            <img src="/Images/patioBullrich.png" alt=""/>
+        </div>
+
+        <div id="alcorta">
+            <img src="/Images/alcortaLogo.png" alt=""/>
+        </div>
+
+        <div id="dot">
+            <img src="/Images/dotLogo.png" alt=""/>
+        </div>
+
+        <div id="altoPalermo">
+            <img src="/Images/altoPalermo.png" alt=""/>
+        </div>
+
+        <div id="abasto">
+            <img src="/Images/abastoShopping.png" alt=""/>
+        </div>
+
+        <div id="altoAvellaneda">
+            <img src="/Images/altoAvellaneda.png" alt=""/>
+        </div>
+
+        <div id="solei">
+            <img src="/Images/soleiLogo.png" alt=""/>
+        </div>
+
+        <div id="arcos">
+            <img src="/Images/distritoArcos.png" alt=""/>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>
